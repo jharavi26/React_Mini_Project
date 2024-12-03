@@ -2,8 +2,8 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div>
-      <img src="" alt=""/>
+    <div className='navbar'>
+      <img src="https://www.shutterstock.com/shutterstock/photos/2278726727/display_1500/stock-vector-minimalistic-circular-logo-sample-vector-2278726727.jpg" style={{ width: '100px', height: '80px' }} alt="Icon Image"/>
       <ul>
         <li>Home </li>
         <li>Products</li>
