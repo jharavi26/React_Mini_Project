@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Hello from './component/Hello'
+import Two from './component/Two'
 
 function App() {
  
@@ -8,8 +9,8 @@ function App() {
   return (
     <>
     <h1>Project-Component Building</h1>
-    <p>This is My Home Page</p> 
     <Hello />
+    <Two />
     
       
     </>
