@@ -18,7 +18,7 @@ function Hello() {
         <p>User Input :- {input} </p>
 
         </form>
-        <div>
+        {/* <div>
             {data ? (
               <ul>
                 {data.posts.map((post) => (
@@ -29,7 +29,7 @@ function Hello() {
               <p>Loading...</p>
             )}
   
-    </div>
+    </div> */}
     </div>
   )
 }
