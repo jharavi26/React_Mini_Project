@@ -4,7 +4,7 @@ export default function Two() {
   const [count, setCount] = useState(0);
   const fruits = ['Apple', 'Banana', 'Mango', 'Orange', 'Pineapple']
   const [time, setTime] = useState(60);
-  const [backgroundColor, setBackgroundColor] = useState("green");
+  const [backgroundColor, setbackgroundColor] = useState("green");
 
   useEffect(()=>{
     if(time>0){
@@ -16,7 +16,7 @@ export default function Two() {
 
   const handleClick = ()=>{
     const newColor = backgroundColor === "green" ? "orange" : "green";
-    setBackgroundColor(newColor);
+    setbackgroundColor(newColor);
 
   }
   return (
