@@ -9,6 +9,7 @@ export default function Two() {
       <span>{count}</span>
       <button style={{margin:"10px"}} onClick={()=>setCount(count-1)}>Remove Me</button>
       <button onClick ={()=>setCount(0)}>Reset</button>
+      
       <ol>
         {fruits.map((fruit, index)=>{
           return <li key={index}> {fruit}</li>
