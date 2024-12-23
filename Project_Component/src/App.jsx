@@ -2,9 +2,11 @@ import { useState } from 'react'
 import './App.css'
 import Hello from './component/Hello'
 import Two from './component/Two'
-import Weather from './component/Weather'
+import Three from './component/Three'
+
 
 function App() {
+  const items = ["Apple","Mango","Banana", "Orange","Pineapple"]
  
 
   return (
@@ -12,7 +14,7 @@ function App() {
     <h1>Project-Component Building</h1>
     <Hello />
     <Two />
-    <Weather />
+    <Three items = {items}/>
     
       
     </>
