@@ -3,6 +3,7 @@ import './App.css'
 import Hello from './component/Hello'
 import Two from './component/Two'
 import Three from './component/Three'
+import Four from './component/Four'
 
 
 function App() {
@@ -15,8 +16,8 @@ function App() {
     <Hello />
     <Two />
     <Three items = {items}/>
+    <Four items = {items} itemsPerPage={1}/>
     
-      
     </>
   )
 }
