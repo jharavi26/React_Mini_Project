@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Modal from './component/Modal';
+import Calculator from './Calculator/Calculator';
 
 function App() {
   const[modalOpen, SetModalOpen] = useState(false);
@@ -27,6 +28,9 @@ function App() {
     )}
 
 {message && <p className="message">{message}</p>}
+<Calculator />
+
+
       
     </>
   )
