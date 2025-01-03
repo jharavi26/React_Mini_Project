@@ -5,6 +5,26 @@
   align-items: center;
 }
 .box{
+  margin-top: 40px;
   display: grid;
-  
+  grid-template-columns: repeat(4, 1fr);
+  width: 50vh;
+  height: 50vh;
+  gap: 16px;
 }
+.cell{
+  background-color: rgb(71, 243, 71);
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+input{
+  width: 280px;
+  height: 40px;
+  font-size: 20px;
+  padding-left: 5px;
+  margin-top: 10px;
+}
+
+

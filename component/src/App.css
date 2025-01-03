@@ -22,7 +22,7 @@
   background-color: blueviolet;
   position: absolute;
   top: 50%;            /* Center vertically */
-  left: 50%;           /* Center horizontally */
+  left: 20%;           /* Center horizontally */
 }
 .message{
   position: absolute;
