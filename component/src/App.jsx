@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Modal from './component/Modal';
 import Calculator from './Calculator/Calculator';
+import Otp from './OTP/Otp';
 
 function App() {
   const[modalOpen, SetModalOpen] = useState(false);
@@ -29,6 +30,7 @@ function App() {
 
 {message && <p className="message">{message}</p>}
 <Calculator />
+<Otp/>
 
 
       
