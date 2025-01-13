@@ -7,7 +7,6 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import RootLayout from './layout/RootLayout'
 
-
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
