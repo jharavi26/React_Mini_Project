@@ -1,6 +1,9 @@
 Routing in React is managed using a library called React Router, which allows developers to create and manage navigation within a React application.
 Router dom is Library in which many functionality we have to import it & use it.
 
+Routes: A container for defining multiple routes.
+Route: Matches the URL path and renders the corresponding component.
+
 A Navigation Bar (or Navbar) is a user interface element that provides links or menus to help users navigate through a website or application. 
 
 Using the Link component ensures navigation adheres to SPA principles, providing better performance, user experience, and integration with React Router. 
