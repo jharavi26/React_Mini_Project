@@ -28,3 +28,17 @@
   display: flex;
   justify-content: center;
 }
+
+.pagination > span {
+  padding: 15px 20px;
+  border: 1px solid grey ;
+  cursor: pointer;
+}
+
+.pagination_disable{
+  opacity: 0;
+}
+
+.pagination_selected{
+  background-color: rgb(220, 220, 220);
+}

@@ -41,13 +41,15 @@ function CountDown() {
         </div>
       }
       {
-        products.length>0 && <div className ="pagination">
+        products.length > 0 && <div className ="pagination">
         {
           [...Array(products.length / 5)].map((_ , i )=>{
             return <span key = {i} >{i+1}</span> 
           })
+          
         }
-          </div>
+        </div>
+          
       }
       
     </div>
