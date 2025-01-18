@@ -1,14 +1,19 @@
 
+import { useEffect, useState } from 'react'
 import './App.css'
-import CountDown from './component/CountDown'
+import Progress from './component/Progress Bar/Progress'
+
 
 function App() {
-  
+
+
 
   return (
-    <>
-    <CountDown />
-    </>
+    <div className='app'>
+      <Progress/>
+    </div>
+   
+    
   )
 }
 
