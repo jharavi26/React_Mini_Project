@@ -23,6 +23,12 @@ function CountDown() {
     fetchData();
   },[])
 
+  const selectPageHandler = (selectedPage) =>{
+    if(selectedPage >= 1 && selectedPage <= products.length /5 && selectedPage !== page){
+      setPage(selectedPage)
+    }
+  }
+
   return (
     <div>
       {
@@ -42,13 +48,17 @@ function CountDown() {
       }
       {
         products.length > 0 && <div className ="pagination">
+          <span onClick={()=> selectPageHandler(page-1)} className={page > 1 ? "" : "pagination_disable"}>◀️</span>
         {
           [...Array(products.length / 5)].map((_ , i )=>{
-            return <span key = {i} >{i+1}</span> 
+            return <span key = {i} className={page === i+1 ? "pagination_selected": ""} onClick={()=> selectPageHandler(i+1)} >
+              {i+1}</span> 
           })
           
         }
-        </div>
+        <span onClick ={()=> selectPageHandler(page+1)} className={page < products.length /5 ? " " : "pagination_disable"}> 
+        ▶️</span>       
+         </div>
           
       }
       
