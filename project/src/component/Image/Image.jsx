@@ -11,32 +11,37 @@ const Image = () => {
 useEffect(()=>{
   const art = fetch("https://picsum.photos/v2/list?page=1&limit=30")
   art.then((res)=> res.json())
-  .then((data)=>{
-    setImageUrl(data[index].download_url);
-  }) 
-},[index])
-  
-const handleNext = ()=>{
-  setIndex((previndex=> previndex+1))
+  .then((data)=> setImageUrl(data));
+  }, [])
+
+const handleNext = () =>{
+  setIndex((prevIndex) => (prevIndex + 1) % imageUrl.length)
 }
 
-const handleLeft = ()=>{
-  if(index>0){
-    setIndex((previndex=>previndex-1))
-  }
-}
+const handleLeft = () => {
+  setIndex((prevIndex) => (prevIndex - 1 + imageUrl.length) % imageUrl.length);
+};
+
 
 useEffect(()=>{
+  if (imageUrl.length > 0){
   ref.current = setInterval(handleNext,1000);
   return ()=>clearInterval(ref.current)
-},[])
+  }
+}, [imageUrl.length])
 
   return (
     <div onMouseEnter ={()=>clearInterval(ref.current)} 
     onMouseLeave ={()=>{ref.current = setInterval(handleNext,1000)}} className='container'>
       <div onClick = {handleLeft} className = "left-btn">◀️</div>
       <div className='imagelist'>
-        <img src = {imageUrl} alt="image"/>
+        {
+          imageUrl.length>0 ? (
+        <img src = {imageUrl[index].download_url} alt="image"/>
+        ) :
+        (
+          <p>Loading :</p>
+        )}
         
       </div>
       
