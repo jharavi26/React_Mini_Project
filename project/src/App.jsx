@@ -1,10 +1,7 @@
 
 import { useEffect, useState } from 'react'
 import './App.css'
-import Image from './component/Light/Image'
-
-
-
+import Image from './component/Image/Image'
 
 function App() {
 
@@ -12,11 +9,8 @@ function App() {
     <div className='app'>
       <h1>Image Carosoul</h1>
       <Image />
-    
     </div>
-   
     
   )
 }
-
 export default App
