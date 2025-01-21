@@ -11,7 +11,15 @@ function App() {
     <>
      <h1>React-Practice</h1>
      <Counter name="Art" list={cars}/>
-    </>
+     <ol>
+      {
+        cars.map((item)=>{
+          return <li key = {cars.index}>{item}</li>
+        })
+
+     }
+     </ol>
+     </>
   )
 }
 
