@@ -32,7 +32,7 @@ useEffect(()=>{
 
   return (
     <div onMouseEnter ={()=>clearInterval(ref.current)} 
-    onMouseLeave ={()=>{ref.current = setInterval(handleNext,1000)}} className='container'>
+     onMouseLeave ={()=>{ref.current = setInterval(handleNext,1000)}} className='container'>
       <div onClick = {handleLeft} className = "left-btn">◀️</div>
       <div className='imagelist'>
         {

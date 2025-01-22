@@ -1,14 +1,16 @@
 
 import { useEffect, useState } from 'react'
 import './App.css'
-import Image from './component/Image/Image'
+import Like from './component/Like_Btn/Like'
+
 
 function App() {
 
   return (
     <div className='app'>
-      <h1>Image Carosoul</h1>
-      <Image />
+      <Like />
+    
+      
     </div>
     
   )
