@@ -1,14 +1,15 @@
 
 import { useEffect, useState } from 'react'
 import './App.css'
-import Like from './component/Like_Btn/Like'
+import Practice from './component/Image/demo'
+
 
 
 function App() {
 
   return (
     <div className='app'>
-      <Like />
+    <Practice />
     
       
     </div>
