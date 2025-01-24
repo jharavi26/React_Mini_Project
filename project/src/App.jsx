@@ -1,7 +1,9 @@
 
 import { useEffect, useState } from 'react'
 import './App.css'
-import Infinite from './component/Infinite_Scroll/Infinite'
+import Game from './component/Tic-Tac-Game/Game'
+
+
 
 
 
@@ -10,7 +12,8 @@ function App() {
 
   return (
     <div className='app'>
-      <Infinite />
+      <Game />
+      
     
       
     </div>
