@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react'
 import './App.css'
-import Game from './component/Tic-Tac-Game/Game'
+import Product from './component/Product_Filter/Product'
 
 
 
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className='app'>
-      <Game />
+      <Product />
       
     
       

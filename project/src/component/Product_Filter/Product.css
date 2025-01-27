@@ -1,0 +1,46 @@
+h1{
+  text-align: center;
+}
+
+.sort{
+ display: flex;
+ flex-direction: row;
+ text-align: center;
+ justify-content: center;
+ align-items: center;
+ gap: 10px;
+}
+
+.item{
+  border: 2px solid black;
+}
+
+.products-list{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.itemlist{
+  width: 100px;
+  height: 100px;
+  border: 0.7px solid black;
+  margin: 10px;
+  cursor: pointer;
+  text-align: center;
+  background-color: whitesmoke;
+}
+
+button{
+  margin: 10px;
+  padding: 7px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.category{
+  font-size: 24px;
+  font-style: italic;
+}
+
