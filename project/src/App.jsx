@@ -1,17 +1,15 @@
 
-import { useEffect, useState } from 'react'
 import './App.css'
-import Quiz from './component/Quiz-App/Quiz'
-import { use } from 'react'
+import Basic from './component/Form/Basic'
+import Light from './component/Grid_Light/Light'
+
 
 
 function App() {
 
-
   return (
-    <div className='app'>
-      <Quiz />
-      
+    <div className ='app'>
+      <Light />
     </div>
     
   )
