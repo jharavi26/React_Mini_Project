@@ -1,20 +1,16 @@
 
 import { useEffect, useState } from 'react'
 import './App.css'
-import Product from './component/Product_Filter/Product'
-
-
-
-
+import Quiz from './component/Quiz-App/Quiz'
+import { use } from 'react'
 
 
 function App() {
 
+
   return (
     <div className='app'>
-      <Product />
-      
-    
+      <Quiz />
       
     </div>
     
