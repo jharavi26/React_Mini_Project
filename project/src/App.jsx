@@ -1,7 +1,7 @@
 
 import './App.css'
-import Basic from './component/Form/Basic'
-import Light from './component/Grid_Light/Light'
+import Grid from './component/Select_Grid/Grid'
+
 
 
 
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className ='app'>
-      <Light />
+      <Grid/>
     </div>
     
   )
