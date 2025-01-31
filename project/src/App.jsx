@@ -1,19 +1,16 @@
 
 import './App.css'
-import Grid from './component/Select_Grid/Grid'
+import Job from './component/Job_Board/Job'
+
 
 
 
 
 function App() {
-
   return (
- 
-   
     <div className ='app'>
-      <Grid rows = {10} columns={10}/>
+    <Job />
     </div>
- 
     
   )
 }
