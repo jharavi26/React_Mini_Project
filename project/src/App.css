@@ -1,0 +1,24 @@
+[data-theme="light"]{
+  --bg-color : white;
+  --text-color : black;
+  --heading-color : black;
+}
+
+[data-theme="dark"]{
+  --bg-color : rgb(7, 7, 7);
+  --text-color : rgb(237, 227, 227);
+  --heading-color : rgb(235, 214, 214);
+}
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0 30px; 
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+h1{
+  color: var(--heading-color);
+}
+
