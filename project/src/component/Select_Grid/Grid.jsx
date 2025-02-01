@@ -22,8 +22,8 @@ const handleMouseEnter = (boxNumber)=>{
     const startBox = selectBoxes[0];
     const endBox = boxNumber;
 
-    const startRow = Math.floor((startBox - 1)/columns);
-    const startColumn = (startBox -1 )% columns;
+    const startRow = Math.floor((startBox - 1)/columns);   // ((23-1)/10=2)
+    const startColumn = (startBox -1 )% columns;               // 22 % 10 = 2
     const endRow = Math.floor((endBox - 1)/columns);
     const endColumn = (endBox -1 )% columns;
 
