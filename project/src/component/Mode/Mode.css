@@ -1,0 +1,26 @@
+
+.page{
+  display: flex;
+  flex-direction: column;
+  height: 92vh;
+  
+}
+
+.navbar{
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center; 
+}
+
+.navbar div{
+  display: flex;
+  gap: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
