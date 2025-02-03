@@ -30,17 +30,53 @@ function Notes({notes=[], setNotes=()=>{}}) {
     const maxY  = window.innerHeight - 250;
 
     return {
-      x:Math.floor(Math.random()*maxX),
+      x : Math.floor(Math.random()*maxX),
       y : Math.floor(Math.random()*maxY),
     }
   }
 
-  const handleDragStart = (id , e)=>{
+  const handleDragStart = (note, e)=>{
+    const {id} = note;
     const noteRefs = noteRef.current[id].current;
     const rect = noteRefs.getBoundingClientRect();
+    const offsetX = e.clientX - rect.left;
+    const offsetY = e.clientY - rect.top;
 
-    console.log(rect)
+    const startPos = note.position;
 
+    const handleMouseMove = (e)=>{
+      const newX = e.clientX - offsetX;
+      const newY = e.clientY - offsetY;
+
+      noteRefs.style.left = `${newX}px`
+      noteRefs.style.top = `${newY}px`
+
+    }
+
+    const handleMouseUp = (e)=>{
+      document.removeEventListener("mousemove" , handleMouseMove);
+      document.removeEventListener("mouseup" , handleMouseUp)
+      
+      const finalRect = noteRefs.getBoundingClientRect();
+      const newPosition = {x : finalRect.left , y : finalRect.top}
+
+      if(false){
+
+      }
+      else{
+        updateNotePosition(id, newPosition)
+      }
+    }
+
+    document.addEventListener("mousemove" , handleMouseMove);
+    document.addEventListener("mouseup" , handleMouseUp)
+
+  }
+
+  const updateNotePosition = (id , newPosition )=>{
+    const updateNotes = notes.map(note=>note.id === id ? {...note , position : newPosition } : note)
+    setNotes(updateNotes)
+    localStorage.setItem("notes", JSON.stringify(updateNotes))
   }
 
 
@@ -53,7 +89,7 @@ function Notes({notes=[], setNotes=()=>{}}) {
           ref  = {noteRef.current[note.id] ? noteRef.current[note.id]  : (noteRef.current[note.id] = createRef())
 
           }
-          initialPosition  = {note.position} content = {note.text} onMouseDown={(e)=>handleDragStart(note.id, e)}></Note> 
+          initialPosition  = {note.position} content = {note.text} onMouseDown={(e)=>handleDragStart(note, e)}></Note> 
         })
       }
 
