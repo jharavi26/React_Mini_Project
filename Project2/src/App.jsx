@@ -1,13 +1,14 @@
 
 import './App.css'
-import Drop from './Components/Drag-Drop/Drop'
+import TypeAhead from './Components/AutoSuggestion/TypeAhead'
 
 function App() {
 
   return (
     <>
       <div>
-        <Drop />
+        <TypeAhead />
+    
        </div>
     </>
   )
