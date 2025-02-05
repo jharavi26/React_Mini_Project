@@ -21,12 +21,19 @@ export default function TypeAhead() {
     const {signal} = abortController ;
 
     const fetchData = async ()=>{
+
       try {
+        setStatus(STATE.LOADING);
+        if(cache.current[query]){
+          setResult(cache.current[query]);
+          setStatus(STATE.SUCCESS)
+          return;
+        }
       setStatus(STATE.LOADING)
       const res = await fetch(`https://dummyjson.com/products/search?q=${query}&limit=10` , {signal});
       const data = await res.json();
       setStatus(STATE.SUCCESS)
-      
+      cache.current[query] = data.products;
       setResult(data.products)
 
       } catch(error){
