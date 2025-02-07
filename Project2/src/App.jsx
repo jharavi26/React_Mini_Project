@@ -1,13 +1,15 @@
 
 import './App.css'
-import TypeAhead from './Components/AutoSuggestion/TypeAhead'
+import Faq from './Components/Accordian/Faq'
+
 
 function App() {
 
   return (
     <>
       <div>
-        <TypeAhead />
+        <Faq />
+       
     
        </div>
     </>
