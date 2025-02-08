@@ -1,19 +1,22 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Light.css"
 
 function Light() {
 
-  const status = {
-    Stop : "Red",
-    Proceed : "Green",
-    Caution : "Yellow"
-  }
+  const [state, setState] = useState(false);
 
-  const [state, setState] = useState();
+  useEffect(()=>{
+    setInterval(() => {
+      
+    }, 10000);
+
+  },[])
+
+  
 
   return (
     <div>
-      <div className='red'></div>
+      <div className='red' ></div>
       <div className='green'></div>
       <div className='yellow'></div>
       

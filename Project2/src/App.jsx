@@ -1,7 +1,7 @@
 
 import './App.css'
-import Faq from './Components/Accordian/Faq'
-import Light from './Components/Traffic-Light/Light'
+
+import Select from './Components/multi-select-input/Select'
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <div>
-        <Light/>
+        <Select />
        
     
        </div>
