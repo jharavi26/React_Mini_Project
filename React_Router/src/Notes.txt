@@ -16,3 +16,4 @@ Command :-npm install react-router dom
 Step 1:-BroswerRotuer :-wrapping your application in a BrowserRouter component, which enables routing functionality.
 Step 2:-Routes and Route Components: Routes are defined using the Route component, which specifies the path and the component to render.
 Step 3:-Navigation: Use the Link or NavLink component to navigate between routes without reloading the page.
+
