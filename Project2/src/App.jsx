@@ -1,7 +1,8 @@
 
 import './App.css'
+import Otp from './Components/otp/Otp'
 
-import Select from './Components/multi-select-input/Select'
+
 
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
   return (
     <>
       <div>
-        <Select />
+        <Otp />
+     
        
     
        </div>
