@@ -1,0 +1,36 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form{
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input {
+  height: 30px;
+  font-size: 20px;
+  padding: 7px;
+}
+
+button{
+  width: 120px;
+  height: 45px;
+  border: none;
+  font-size: 20px;
+  background-color: purple;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+

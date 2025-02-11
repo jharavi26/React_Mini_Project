@@ -1,6 +1,7 @@
 
 import './App.css'
-import Drop from './Components/Drag-Drop/Drop'
+import Form from './Components/MultiStepForm/Form'
+
 
 
 
@@ -11,7 +12,7 @@ function App() {
   return (
     <>
       <div>
-        <Drop/>
+        <Form/>
      
      
        
