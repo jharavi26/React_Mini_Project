@@ -1,6 +1,7 @@
 
 import './App.css'
-import Otp from './Components/otp/Otp'
+import Light from './Components/Traffic-Light/Light'
+
 
 
 
@@ -10,7 +11,8 @@ function App() {
   return (
     <>
       <div>
-        <Otp />
+        <Light/>
+     
      
        
     

@@ -1,26 +1,27 @@
-.red{
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  border: 2px solid black;
-  border-radius: 50%;
-  margin-bottom: 50px;
+.traffic-light {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.green{
+.light {
   width: 100px;
   height: 100px;
-  background-color: green;
-  border: 2px solid black;
   border-radius: 50%;
-  margin-bottom: 50px;
+  margin: 10px;
+  background: gray;
+  transition: background-color 0.5s;
 }
 
-.yellow{
-  width: 100px;
-  height: 100px;
-  background-color: yellow;
-  border: 2px solid black;
-  border-radius: 50%;
-  margin-bottom: 50px;
+.light.red.active {
+  background: red;
+}
+
+.light.yellow.active {
+  background: yellow;
+}
+
+.light.green.active {
+  background: green;
 }

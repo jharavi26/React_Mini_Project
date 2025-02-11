@@ -1,27 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import "./Light.css"
+import "./Light.css";
 
 function Light() {
+  const [current, setCurrent] = useState(0);
+  const lights = ["red", "yellow", "green"];
 
-  const [state, setState] = useState(false);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % lights.length);
+    }, current === 0 ? 3000 : 2000);
 
-  useEffect(()=>{
-    setInterval(() => {
-      
-    }, 10000);
-
-  },[])
-
-  
+    return () => clearInterval(interval);
+  }, [current]);
 
   return (
-    <div>
-      <div className='red' ></div>
-      <div className='green'></div>
-      <div className='yellow'></div>
-      
+    <div className="traffic-light">
+      {lights.map((light, index) => (
+        <div 
+          key={light} 
+          className={`light ${light} ${current === index ? "active" : ""}`}
+        ></div>
+      ))}
     </div>
-  )
+  );
 }
 
-export default Light
+export default Light;
