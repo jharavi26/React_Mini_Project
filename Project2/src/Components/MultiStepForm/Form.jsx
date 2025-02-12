@@ -35,6 +35,14 @@ function Form() {
 
 const [index, setIndex] = useState(0);
 const [forms, setForms ] = useState(data);
+const [formData, setFormData] = useState({
+  name : "",
+  email : "",
+  dob : "",
+  password : ""
+
+})
+const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
 const handleSubmit = (e)=>{
   e.preventDefault();
@@ -47,24 +55,49 @@ const handleBack = (e)=>{
   setIndex((id)=>id-1);
 }
 
+const handleInputChange = (e)=>{
+  const id = e.target.id ;
+  const value = e.target.value ; 
+  const copyFormData = {...formData};
+  copyFormData[id] = value;
+  setFormData(copyFormData);
+}
+
+
 
   return (
     <div className='container'>
-      <form className='form' onSubmit={handleSubmit}>
+     { !isFormSubmitted ?  <form className='form' onSubmit={handleSubmit}>
         {
           index > 0 && <a href='/' onClick={handleBack}>Back</a>
         }
         <label>
           {forms[index].label}
         </label>
-        <input type={forms[index].type} placeholder={forms[index].placeholder}></input>
+        <input 
+        value = {formData[forms[index].id]}
+        id = {forms[index].id} 
+        onChange={handleInputChange}
+        type={forms[index].type} placeholder={forms[index].placeholder}></input>
         <button>{forms[index].buttonName}</button>
 
-      </form>
+      </form> :
 
-      
+    <div><h1>Success! </h1>
+    <hr/>
+    <span>Name : {formData.name}</span>
+    <br/>
+    <span>Name : {formData.email}</span>
+    <br/>
+    <span>Name : {formData.dob}</span>
+    <br/>
+    <span>Name : {formData.password}</span>
+    <br/>
+    </div>
+}
     </div>
   )
 }
+
 
 export default Form
