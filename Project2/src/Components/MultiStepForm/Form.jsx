@@ -39,14 +39,21 @@ const [forms, setForms ] = useState(data);
 const handleSubmit = (e)=>{
   e.preventDefault();
   if(index < data.length-1) 
-    setIndex((id)=>id+1);
-    
+    setIndex((id)=>id+1);  
+}
+
+const handleBack = (e)=>{
+  e.preventDefault();
+  setIndex((id)=>id-1);
 }
 
 
   return (
     <div className='container'>
       <form className='form' onSubmit={handleSubmit}>
+        {
+          index > 0 && <a href='/' onClick={handleBack}>Back</a>
+        }
         <label>
           {forms[index].label}
         </label>
