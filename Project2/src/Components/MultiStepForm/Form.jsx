@@ -46,8 +46,11 @@ const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
 const handleSubmit = (e)=>{
   e.preventDefault();
-  if(index < data.length-1) 
-    setIndex((id)=>id+1);  
+  if(index === data.length-1){ 
+    setIsFormSubmitted(true); 
+  } else {
+    setIndex((id)=>id+1);
+  }
 }
 
 const handleBack = (e)=>{
