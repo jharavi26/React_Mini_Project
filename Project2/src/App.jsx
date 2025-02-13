@@ -1,10 +1,6 @@
 
 import './App.css'
-import Tab from './Components/Tab/Tab'
-
-
-
-
+import Layout from './Components/HoluGrail/Layout'
 
 
 function App() {
@@ -12,10 +8,7 @@ function App() {
   return (
     <>
       <div>
-       <Tab />
-     
-     
-       
+        <Layout />
     
        </div>
     </>
