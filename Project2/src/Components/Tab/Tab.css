@@ -1,0 +1,15 @@
+.tablist {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button{
+  font-size: 20px;
+  background-color: rgb(247, 235, 235);
+  font-weight: bold;
+}
+
+button:hover{
+  border : 2px solid green;
+}

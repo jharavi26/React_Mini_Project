@@ -1,6 +1,6 @@
 
 import './App.css'
-import Form from './Components/MultiStepForm/Form'
+import Tab from './Components/Tab/Tab'
 
 
 
@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <div>
-        <Form/>
+       <Tab />
      
      
        
