@@ -1,17 +1,29 @@
-import React, { useRef } from 'react'
+import React, { useState } from 'react'
 
-const Focus = () => {
-  const inputElement = useRef();
 
-  function handle(){
-    inputElement.current.focus();
+const Focus = ({tabList}) => {
 
+  const [index , setIndex] =useState(0);
+
+  const handleClick = (id)=>{
+    setIndex(id)
   }
+
+  const ComponentResult = tabList[index].Component;
 
   return (
     <div>
-      <input type='text' ref= {inputElement}/>
-      <button onClick={handle}>Focus</button>
+      <h1>Custom Tab Component </h1>
+
+
+
+      {
+        tabList.map((item, index)=>{
+          return <button key = {index} onClick={()=>handleClick(index)}>{item.label}</button>
+        })
+      }
+      <ComponentResult />
+     
       
     </div>
   )

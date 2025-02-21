@@ -1,0 +1,18 @@
+h1{
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+}
+
+.question{
+  border: 2px solid black;
+  padding: 0 5px;
+}
+
+.btn
+{
+  margin-left: 95%;
+  font-size: 20px;
+}
