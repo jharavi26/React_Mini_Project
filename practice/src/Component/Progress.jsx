@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import  data  from "./data.json"
 import "./Style.css";
 
-function Progress() {
+function Progress({value}) {
 
   return (
     <div>

@@ -1,0 +1,29 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.panel{
+  height: 30px;
+  width: 400px;
+  border: 2px solid black;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.panel span{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.panel div{
+  background-color: green;
+  height: 100%;
+}
