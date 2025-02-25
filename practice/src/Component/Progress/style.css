@@ -27,3 +27,30 @@
   background-color: green;
   height: 100%;
 }
+
+.traffic_light{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.light{
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+  border-radius: 50%;
+  background-color: grey;
+  transition: background-color 0.5s;
+}
+
+.light.red.active{
+  background: red;
+}
+
+.light.green.active{
+  background: rgb(29, 193, 7);
+}
+
+.light.yellow.active{
+  background: rgba(211, 233, 15, 0.767);
+}
